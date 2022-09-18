@@ -5,8 +5,7 @@ import torchvision.models
 from torch import nn
 from constants import ROOT_DIR, DEVICE
 
-use_cuda = torch.cuda.is_available()
-device = torch.device("cuda" if use_cuda else "cpu")
+
 class CustomNetwork(nn.Module):
     def __init__(self, experiment_dir="my_model", reset=False, load_best=True):
         super(CustomNetwork, self).__init__()
